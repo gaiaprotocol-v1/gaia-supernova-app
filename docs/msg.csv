@@ -1,0 +1,24 @@
+key,ko,en
+TITLE,가이아 슈퍼노바,Gaia Supernova
+DASHBOARD_DESC,가이아 슈퍼노바 현황,Gaia Supernova State
+DASHBOARD_TITLE1,총 분배된 로열티,Total distributed royalties.
+DASHBOARD_TITLE2,현재 NFT 로열티,Current NFT royalty.
+INFO_TITLE,나의 슈퍼노바,My Gaia Supernova
+INFO_DESC,내가 보유한 슈퍼노바 정보,My information on Supernova
+INFO_TITLE1,내 NFT 개수,My NFTs
+INFO_TITLE2,다음 로열티 수령 가능 블록,Next block where you can receive royalties.
+INFO_TITLE3,내가 받은 누적 로열티,The accumulated royalties that I received.
+INFO_TITLE4,쌓인 로열티,Royalty accumulated.
+WARNING_DESC,다음 로열티 수령 이전에 NFT를 판매하거나 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 사라집니다.,"If you sell NFT or send it to another wallet before receiving the next royalty, all the currently accumulated royalties will disappear."
+REWARD_BUTTON,로열티 받기,Getting royalties.
+OPENSEA_BUTTON,NFT 보기,Watch NFT.
+CONNECT_WALLET_BUTTON,지갑연결,Connect Wallet
+KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code
+KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application
+KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in
+KLIP_POPUP_DESC3,* Klip > 코드스캔 (사이드메뉴)에서도 스캔이 가능합니다.,"* You can also scan the at ""Code Scan"" from side menu of Klip"
+CONNECT_WALLET_TITLE,지갑 연결,Connect Wallet
+CONNECT_WALLET_DESC,가이아 프로토콜은 클레이튼 블록체인과의 연결이 필요합니다. 카이카스 혹은 카카오톡 클립에서 연결해주시기 바랍니다.,Gaia Protocol needs a connection with the Klayton blockchain. Please connect from Kaikas or Kakao Talk Klip.
+CONNECT_WALLET_BUTTON1,카이카스 연결,Connect Kaikas
+CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip
+CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection
