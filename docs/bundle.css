@@ -421,7 +421,7 @@ body {
   display: block;
   width: 100%;
   text-align: center;
-  color: linear-gradient(#111112, #2a292a) fixed;
+  color: black;
   background-color: #990013;
   font-size: 14px;
   padding: 8px 16px;
@@ -565,7 +565,7 @@ body {
   justify-items: center;
   width: 100%;
   background-color: black;
-  max-height: 52px;
+  height: 52px;
   left: 0;
   top: 0;
   z-index: 999;
@@ -581,6 +581,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1240px;
+  max-height: 56px;
   margin: auto;
   padding: 8px;
 }
@@ -600,14 +601,6 @@ body {
   height: 0;
   clear: both;
   visibility: hidden;
-}
-.home-view > header > .nav > .right > .user-menu {
-  float: right;
-}
-@media only screen and (max-width: 719px) {
-  .home-view > header > .nav > .right > .user-menu {
-    display: none;
-  }
 }
 .home-view > header > .nav > .right > .language-select {
   font-family: copperplate, serif;
@@ -630,8 +623,6 @@ body {
 }
 @media only screen and (max-width: 719px) {
   .home-view > header > .nav > .right > .language-select {
-    width: 100%;
-    height: 100%;
     background-color: transparent;
   }
   .home-view > header > .nav > .right > .language-select:hover {
@@ -646,6 +637,11 @@ body {
   justify-content: center;
   margin: auto;
   margin-top: 54px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > main {
+    padding: 20px;
+  }
 }
 .home-view > main > .dashboard-container {
   display: flex;
@@ -669,11 +665,22 @@ body {
   justify-content: space-around;
   padding-top: 64px;
 }
+@media only screen and (max-width: 719px) {
+  .home-view > main > .dashboard-container > section {
+    padding-top: 32px;
+    flex-direction: column;
+  }
+}
 .home-view > main > .dashboard-container > section > article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > main > .dashboard-container > section > article {
+    margin-top: 32px;
+  }
 }
 .home-view > main > .dashboard-container > section > article > h3 {
   padding-top: 8px;
@@ -707,6 +714,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 64px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > main > .info-container > section {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home-view > main > .info-container > section > article {
   display: flex;
@@ -761,6 +775,7 @@ body {
   background-color: rgba(153, 0, 19, 0.8);
 }
 .home-view > main > .info-container > .action-container > .button-container > a {
+  display: block;
   color: white;
   margin-top: 16px;
   font-family: copperplate, serif;
