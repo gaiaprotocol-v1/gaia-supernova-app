@@ -4,6 +4,7 @@
         display         : flex;
         position        : fixed;
         justify-items   : center;
+        align-items     : center;
         width           : 100%;
         background-color: black;
         height          : 52px;
@@ -79,7 +80,7 @@
         flex-direction : column;
         justify-content: center;
         margin         : auto;
-        margin-top     : 54px;
+        margin-top     : 128px;
 
         @media @phone {
             padding: 20px;
@@ -142,6 +143,7 @@
         >.info-container {
             display         : flex;
             flex-direction  : column;
+            justify-content : center;
             text-align      : center;
             background-color: black;
             border-radius   : 8px;
@@ -192,10 +194,11 @@
             }
 
             >.action-container {
-                margin-top    : 64px;
-                display       : flex;
-                flex-direction: column;
-                align-items   : center;
+                margin-top     : 64px;
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                align-items    : center;
 
                 >.warning-container {
                     display         : flex;
@@ -224,6 +227,10 @@
                         padding         : 16px 100px;
                         margin-right    : 16px;
 
+                        @media @phone {
+                            margin-right: 0px;
+                        }
+
                         &:hover {
                             background-color: rgba(153, 0, 19, 0.9);
                         }
@@ -243,6 +250,10 @@
                         border-radius  : 4px;
                         padding        : 16px 100px;
                         margin-right   : 16px;
+
+                        @media @phone {
+                            margin-right: 0px;
+                        }
 
                         &:hover {
                             border-color    : rgba(153, 0, 19, 0.7);

@@ -128,7 +128,7 @@ export default class Landing implements View {
     }
 
     private async load() {
-        this.blockDisplay.empty().appendText("{current block} / {reward block}".replace(/{current block}/, String(await Klaytn.loadBlockNumber())))
+        this.blockDisplay.domElement.innerText = "{current block} / {reward block}".replace(/{current block}/, String(await Klaytn.loadBlockNumber()))
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
