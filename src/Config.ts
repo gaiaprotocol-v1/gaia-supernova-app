@@ -1,8 +1,9 @@
 export default {
     chainId: 8217,
     contracts: {
-        GaiaNFT: "0xBb915237D8b46Dcdfe813c914Bf98708e0dAd84A",
-        GaiaOperation: "0x903f0E3a0eaB48F17780AB4708a5797614778F20",
-        GaiaBuyBackFund: "0xDF92184e2E0038a715ff88e9C83c79308d29d70a",
+        GaiaKronos: "0xBb915237D8b46Dcdfe813c914Bf98708e0dAd84A",
+        GaiaSupernova: "0x7123F7727C87884233422b145DAB617cdaaC418F",
+        SupernovaRewardDistributor: "0x2098eF52A54D01527BeD8208f24D3732b126dDfc",
+        SupernovaMinter: "0x4155F6ec9AFD462C7752aEbBb401821E9B838812",
     },
 };

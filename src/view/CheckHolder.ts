@@ -1,11 +1,10 @@
-import { DomNode, el } from "@hanul/skynode";
+import { BodyNode, DomNode, el } from "@hanul/skynode";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import superagent from "superagent";
 import DiscordUserInfo from "../DiscordUserInfo";
 import Wallet from "../klaytn/Wallet";
 import Store from "../Store";
-import Layout from "./Home";
 
 export default class CheckHolder implements View {
 
@@ -15,19 +14,18 @@ export default class CheckHolder implements View {
     private codeStore = new Store("codeStore");
 
     constructor() {
-        // Layout.current.title = msg("HOLDER_CHECK_TITLE");
-        // Layout.current.content.append(this.container = el("section.check-holder",
-        //     el("header",
-        //         el("h1", msg("HOLDER_CHECK_TITLE")),
-        //         el("h2", msg("HOLDER_CHECK_DESC"))
-        //     ),
-        //     el("article",
-        //         el("img", { src: "/images/shared/img/earth.png", alt: "earth" }),
-        //         el("a.discord-login-button", msg("HOLDER_CHECK_BUTTON"), {
-        //             href: "https://discord.com/api/oauth2/authorize?client_id=939800869740871693&redirect_uri=https%3A%2F%2Fapp.gaiakronos.com%2Fcheckholder&response_type=code&scope=identify",
-        //         }),
-        //     ),
-        // ));
+        BodyNode.append(this.container = el("section.check-holder",
+            el("header",
+                el("h1", msg("HOLDER_CHECK_TITLE")),
+                el("h2", msg("HOLDER_CHECK_DESC"))
+            ),
+            el("article",
+                el("img", { src: "/images/shared/img/earth.png", alt: "earth" }),
+                el("a.discord-login-button", msg("HOLDER_CHECK_BUTTON"), {
+                    href: "https://discord.com/api/oauth2/authorize?client_id=939800869740871693&redirect_uri=https%3A%2F%2Fapp.gaiakronos.com%2Fcheckholder&response_type=code&scope=identify",
+                }),
+            ),
+        ));
         this.checkDiscordLogin();
     }
 

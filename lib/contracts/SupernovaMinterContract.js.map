@@ -1,0 +1,1 @@
+{"version":3,"file":"SupernovaMinterContract.js","sourceRoot":"","sources":["../../src/contracts/SupernovaMinterContract.ts"],"names":[],"mappings":";;;;;AAAA,uDAA+B;AAC/B,+JAA0I;AAC1I,0DAAkC;AAElC,MAAM,0BAA2B,SAAQ,kBAAQ;IAE7C;QACI,KAAK,CAAC,gBAAM,CAAC,SAAS,CAAC,0BAA0B,EAAE,yCAAkC,CAAC,GAAG,CAAC,CAAC;IAC/F,CAAC;CACJ;AAED,kBAAe,IAAI,0BAA0B,EAAE,CAAC"}
