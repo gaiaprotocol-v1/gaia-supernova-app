@@ -1,10 +1,15 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
-import { View, ViewParams } from "skyrouter";
+import { utils } from "ethers";
 import msg from "msg.js";
+import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../BrowserInfo";
+import CommonUtil from "../CommonUtil";
+import Alert from "../component/shared/dialogue/Alert";
 import UserInfo from "../component/UserInfo";
+import GaiaSupernovaContract from "../contracts/GaiaSupernovaContract";
+import SupernovaRewardDistributor from "../contracts/SupernovaRewardDistributor";
+import Wallet from "../klaytn/Wallet";
 import ViewUtil from "./ViewUtil";
-import Klaytn from "../klaytn/Klaytn";
 
 export default class Landing implements View {
 
@@ -68,11 +73,11 @@ export default class Landing implements View {
                         el("section",
                             el("article",
                                 el("h4", msg("INFO_TITLE1")),
-                                this.allNftDisplay = el("p", "... NFTs"),
+                                this.allNftDisplay = el("p", "..."),
                             ),
                             el("article",
                                 el("h4", msg("INFO_TITLE2")),
-                                this.blockDisplay = el("p", "{current block} / {reward block}"),
+                                this.blockDisplay = el("p", "..."),
                             ),
                             el("article",
                                 el("h4", msg("INFO_TITLE3")),
@@ -86,10 +91,22 @@ export default class Landing implements View {
                         el(".action-container",
                             el(".warning-container",
                                 el("img", { src: "/images/shared/icn/icn-error-red.svg", alt: "warning" }),
-                                el("p", msg("WARNING_DESC"))
+                                el("p", msg("WARNING_DESC")),
                             ),
                             el(".button-container",
-                                el("button", msg("REWARD_BUTTON")),
+                                el("button", msg("REWARD_BUTTON"), {
+                                    click: async () => {
+                                        const address = await Wallet.loadAddress();
+                                        if (address !== undefined) {
+                                            const remainingTimeToClaim = await SupernovaRewardDistributor.remainingTimeToClaim(address);
+                                            if (remainingTimeToClaim.eq(0)) {
+                                                await SupernovaRewardDistributor.claim(address);
+                                            } else {
+                                                new Alert("오류", "아직 수령할 수 없습니다.");
+                                            }
+                                        }
+                                    },
+                                }),
                                 el("a", msg("OPENSEA_BUTTON"), { href: "https://opensea.io/account?search[resultModel]=ASSETS&search[sortBy]=LAST_TRANSFER_DATE&search[query]=gaia%20supernova", target: "_blank" }),
                             ),
                         ),
@@ -122,7 +139,26 @@ export default class Landing implements View {
     }
 
     private async load() {
-        this.blockDisplay.domElement.innerText = "{current block} / {reward block}".replace(/{current block}/, String(await Klaytn.loadBlockNumber()))
+
+        const totalDistribution = await SupernovaRewardDistributor.totalDistribution();
+        this.allRoyaltyDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(totalDistribution))} KLAY`);
+        this.nftRoyaltyDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(totalDistribution.div(1000)))} KLAY`);
+
+        const address = await Wallet.loadAddress();
+        if (address !== undefined) {
+
+            const balance = await GaiaSupernovaContract.balanceOf(address);
+            this.allNftDisplay.empty().appendText(String(balance.toNumber()));
+
+            const remainingTimeToClaim = await SupernovaRewardDistributor.remainingTimeToClaim(address);
+            this.blockDisplay.empty().appendText(CommonUtil.displayBlockDuration(remainingTimeToClaim.toNumber()));
+
+            const claimed = await SupernovaRewardDistributor.claimed(address);
+            this.receivedDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(claimed))} KLAY`);
+
+            const claimableReward = await SupernovaRewardDistributor.claimableReward(address);
+            this.totalInterestDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(claimableReward))} KLAY`);
+        }
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

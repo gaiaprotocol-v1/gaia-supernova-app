@@ -9,7 +9,6 @@ export default class Landing implements View {
     private receivedDisplay;
     private totalInterestDisplay;
     constructor();
-    private init;
     private load;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
