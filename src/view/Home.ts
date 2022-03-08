@@ -1,6 +1,5 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
-import AOS from "aos";
 import msg from "msg.js";
 import BrowserInfo from "../BrowserInfo";
 import UserInfo from "../component/UserInfo";
@@ -48,7 +47,7 @@ export default class Landing implements View {
                     ),
                 ),
                 el("main",
-                    el("section.dashboard-container", { "data-aos": "zoom-in" },
+                    el("section.dashboard-container",
                         el("h1", msg("TITLE")),
                         el("h2", msg("DASHBOARD_DESC")),
                         el("section",
@@ -63,7 +62,7 @@ export default class Landing implements View {
                             ),
                         ),
                     ),
-                    el("section.info-container", { "data-aos": "zoom-in" },
+                    el("section.info-container",
                         el("h2", msg("INFO_TITLE")),
                         el("h3", msg("INFO_DESC")),
                         el("section",
@@ -118,13 +117,8 @@ export default class Landing implements View {
             ))
         );
         this.interval = setInterval(() => this.load(), 1000);
-        this.init();
 
         select.domElement.value = BrowserInfo.language;
-    }
-
-    private async init() {
-        AOS.init();
     }
 
     private async load() {

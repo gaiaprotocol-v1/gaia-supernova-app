@@ -2,11 +2,11 @@ key,ko,en
 TITLE,가이아 슈퍼노바,Gaia Supernova
 DASHBOARD_DESC,가이아 슈퍼노바 현황,Gaia Supernova State
 DASHBOARD_TITLE1,총 분배된 로열티,Total distributed royalties.
-DASHBOARD_TITLE2,현재 NFT 로열티,Current NFT royalty.
+DASHBOARD_TITLE2,NFT 1개에 분배된 로열티,Royalty distributed to 1 NFT.
 INFO_TITLE,나의 슈퍼노바,My Gaia Supernova
 INFO_DESC,내가 보유한 슈퍼노바 정보,My information on Supernova
 INFO_TITLE1,내 NFT 개수,My NFTs
-INFO_TITLE2,다음 로열티 수령 가능 블록,Next block where you can receive royalties.
+INFO_TITLE2,다음 로열티 수령 가능 일자,The next date you can be received.
 INFO_TITLE3,내가 받은 누적 로열티,The accumulated royalties that I received.
 INFO_TITLE4,쌓인 로열티,Royalty accumulated.
 WARNING_DESC,다음 로열티 수령 이전에 NFT를 판매하거나 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 사라집니다.,"If you sell NFT or send it to another wallet before receiving the next royalty, all the currently accumulated royalties will disappear."
