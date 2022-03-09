@@ -124,7 +124,7 @@ export default class Landing implements View {
                             el("a.twitter", { href: "https://twitter.com/gaia_protocol", target: "_blank" },
                                 el("img", { src: "/images/shared/icn/icn-twitter.svg" }),
                             ),
-                            el("a.gitbook", { href: "https://docs.gaiasupernova.com/", target: "_blank" },
+                            el("a.gitbook", { href: "https://gaiaprotocol.notion.site/Gaia-Supernova-Docs-7f6a1ea8c1294c9ca5669481270b2e78", target: "_blank" },
                                 el("img", { src: "/images/shared/icn/icn-notion.svg" }),
                             ),
                         ),
