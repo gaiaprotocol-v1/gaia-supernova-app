@@ -102,7 +102,7 @@ export default class Landing implements View {
                                             if (remainingTimeToClaim.eq(0)) {
                                                 await SupernovaRewardDistributor.claim(address);
                                             } else {
-                                                new Alert("오류", "아직 수령할 수 없습니다.");
+                                                new Alert(msg("ALERT_UNABLE_RECEIVE_TITLE"), msg("ALERT_UNABLE_RECEIVE_DESC"));
                                             }
                                         }
                                     },

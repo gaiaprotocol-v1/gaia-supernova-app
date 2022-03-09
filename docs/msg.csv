@@ -22,3 +22,5 @@ CONNECT_WALLET_DESC,가이아 프로토콜은 클레이튼 블록체인과의 �
 CONNECT_WALLET_BUTTON1,카이카스 연결,Connect Kaikas
 CONNECT_WALLET_BUTTON2,카카오톡 클립으로 연결,Connect with Kakao Talk Klip
 CONNECT_WALLET_BUTTON3,연결하지 않고 둘러보기,Explore without Wallet Connection
+ALERT_UNABLE_RECEIVE_TITLE,오류,Error
+ALERT_UNABLE_RECEIVE_DESC,아직 수령할 수 없습니다.,Can't receive it yet.

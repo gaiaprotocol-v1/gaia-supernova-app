@@ -213,10 +213,10 @@ body {
   border-radius: 4px;
 }
 .dialogue.alert > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background-color: rgba(153, 0, 19, 0.8);
 }
 .dialogue.alert > .button-container > button:active {
-  background-color: #b19c76;
+  background-color: #990013;
 }
 .dialogue.confirm {
   position: relative;
@@ -250,10 +250,10 @@ body {
   border-radius: 4px;
 }
 .dialogue.confirm > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background-color: rgba(153, 0, 19, 0.8);
 }
 .dialogue.confirm > .button-container > button:active {
-  background-color: #b19c76;
+  background-color: #990013;
 }
 .dialogue.prompt {
   position: relative;
@@ -307,10 +307,10 @@ body {
   border-radius: 4px;
 }
 .dialogue.prompt > .button-container > button:hover {
-  background-color: rgba(177, 156, 118, 0.8);
+  background-color: rgba(153, 0, 19, 0.8);
 }
 .dialogue.prompt > .button-container > button:active {
-  background-color: #b19c76;
+  background-color: #990013;
 }
 .connect-wallet-popup {
   position: relative;
@@ -470,10 +470,10 @@ body {
   color: #ccc;
 }
 .user-info > ul > li > a:hover {
-  color: #b19c76;
+  color: #990013;
 }
 .user-info > ul > li > a:active {
-  color: #b19c76;
+  color: #990013;
 }
 .pc-menu > ul {
   display: flex;
@@ -513,10 +513,10 @@ body {
   padding: 10px;
 }
 .pc-menu > ul > li > ul > li > a:hover {
-  color: #b19c76;
+  color: #990013;
 }
 .pc-menu > ul > li > ul > li > a:active {
-  color: #b19c76;
+  color: #990013;
 }
 .pc-menu > ul > li:hover > ul {
   display: block;
@@ -533,10 +533,10 @@ body {
   font-size: 0.825rem;
 }
 .mobile-menu > ul > li > a:hover {
-  color: #b19c76;
+  color: #990013;
 }
 .mobile-menu > ul > li > a:active {
-  color: #b19c76;
+  color: #990013;
 }
 .mobile-menu > ul > li > ul {
   margin-left: 10px;
@@ -547,10 +547,10 @@ body {
   color: #ccc;
 }
 .mobile-menu > ul > li > ul > li > a:hover {
-  color: #b19c76;
+  color: #990013;
 }
 .mobile-menu > ul > li > ul > li > a:active {
-  color: #b19c76;
+  color: #990013;
 }
 .mobile-menu > ul > li > ul > li.parent {
   display: none;
