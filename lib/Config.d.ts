@@ -3,8 +3,8 @@ declare const _default: {
     contracts: {
         GaiaKronos: string;
         GaiaSupernova: string;
-        SupernovaRewardDistributor: string;
         SupernovaMinter: string;
+        SupernovaRewardDistributor: string;
     };
 };
 export default _default;
