@@ -416,27 +416,27 @@ body {
   overflow-y: scroll;
   padding: 20px 0;
 }
-.user-info > .connect-wallet,
-.user-info > .wallet-address {
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address {
   display: block;
   width: 100%;
   text-align: center;
-  color: white;
+  color: linear-gradient(#111112, #2a292a) fixed;
   background-color: #990013;
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 4px;
 }
-.user-info > .connect-wallet,
-.user-info > .wallet-address:hover {
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address:hover {
   background-color: #990013;
   color: white;
 }
-.user-info > .wallet-address {
+.user-menu > .wallet-address {
   position: relative;
   cursor: pointer;
 }
-.user-info > .wallet-address > ul {
+.user-menu > .wallet-address > ul {
   position: absolute;
   left: 0;
   top: 30px;
@@ -445,34 +445,34 @@ body {
   background-color: #222;
   padding: 10px 0;
 }
-.user-info > .wallet-address > ul > li > a {
+.user-menu > .wallet-address > ul > li > a {
   display: block;
   text-align: center;
   padding: 10px;
   color: #fff;
 }
-.user-info > .wallet-address > ul > li > a:hover {
+.user-menu > .wallet-address > ul > li > a:hover {
   color: #990013;
 }
-.user-info > .wallet-address > ul > li > a:active {
+.user-menu > .wallet-address > ul > li > a:active {
   color: #990013;
 }
-.user-info > .wallet-address:hover > ul {
+.user-menu > .wallet-address:hover > ul {
   display: block;
 }
-.user-info > ul {
+.user-menu > ul {
   margin-top: 10px;
   margin-left: 10px;
 }
-.user-info > ul > li > a {
+.user-menu > ul > li > a {
   display: block;
   padding: 8px 5px;
   color: #ccc;
 }
-.user-info > ul > li > a:hover {
+.user-menu > ul > li > a:hover {
   color: #990013;
 }
-.user-info > ul > li > a:active {
+.user-menu > ul > li > a:active {
   color: #990013;
 }
 .pc-menu > ul {
@@ -491,11 +491,11 @@ body {
   color: white;
 }
 .pc-menu > ul > li > a:hover {
-  background-color: rgba(177, 156, 118, 0.5);
+  background-color: rgba(153, 0, 19, 0.5);
   border-radius: 4px;
 }
 .pc-menu > ul > li > a:active {
-  background-color: rgba(177, 156, 118, 0.7);
+  background-color: rgba(153, 0, 19, 0.7);
   border-radius: 4px;
 }
 .pc-menu > ul > li > ul {
@@ -559,14 +559,122 @@ body {
   margin: auto;
   margin-top: 16px;
 }
+.user-info {
+  display: flex;
+  justify-content: center;
+  min-height: 30px;
+}
+@media only screen and (max-width: 719px) {
+  .user-info {
+    display: none;
+    width: 100%;
+    min-height: 34px;
+    align-items: center;
+    padding: 16px 20px;
+  }
+  .user-info:hover {
+    background-color: rgba(153, 0, 19, 0.9);
+  }
+  .user-info:active {
+    background-color: #990013;
+  }
+}
+.user-info > .connect-wallet,
+.user-info > .wallet-address {
+  color: #990013;
+  padding: 8px 12px 8px 12px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(153, 0, 19, 0.8);
+  border-radius: 4px;
+}
+.user-info > .connect-wallet:hover,
+.user-info > .wallet-address:hover {
+  background-color: rgba(153, 0, 19, 0.9);
+}
+.user-info > .connect-wallet:active,
+.user-info > .wallet-address:active {
+  background-color: #990013;
+}
+@media only screen and (max-width: 719px) {
+  .user-info > .connect-wallet,
+  .user-info > .wallet-address {
+    color: #e0d8c8;
+    width: 100%;
+    padding: 0px;
+    background-color: transparent;
+  }
+  .user-info > .connect-wallet:hover,
+  .user-info > .wallet-address:hover {
+    background-color: transparent;
+  }
+  .user-info > .connect-wallet:active,
+  .user-info > .wallet-address:active {
+    background-color: transparent;
+  }
+}
+.nft-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-item {
+    align-items: center;
+  }
+}
+.nft-item > img {
+  border-radius: 4px;
+  max-width: 256px;
+  width: 100%;
+  height: auto;
+}
+.nft-item > h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: white;
+  text-shadow: 1px 1px 1px #656565;
+}
+@media only screen and (max-width: 719px) {
+  .nft-item > h3 {
+    left: 24px;
+  }
+}
+.nft-item > button {
+  color: white;
+  margin-top: 16px;
+  font-family: copperplate, serif;
+  background-color: #990013;
+  border-radius: 4px;
+  padding: 16px 0px;
+  margin-right: 16px;
+  max-width: 256px;
+  width: 100%;
+}
+@media only screen and (max-width: 719px) {
+  .nft-item > button {
+    margin-right: 0px;
+  }
+}
+.nft-item > button:hover {
+  background-color: rgba(153, 0, 19, 0.9);
+}
+.nft-item > button:active {
+  background-color: rgba(153, 0, 19, 0.8);
+}
 .home-view > header {
   display: flex;
   position: fixed;
   justify-items: center;
-  align-items: center;
   width: 100%;
   background-color: black;
-  height: 52px;
+  max-height: 52px;
   left: 0;
   top: 0;
   z-index: 999;
@@ -582,7 +690,6 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1240px;
-  max-height: 56px;
   margin: auto;
   padding: 8px;
 }
@@ -591,6 +698,11 @@ body {
 }
 .home-view > header > .nav > .logo > a > img {
   height: 36px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > header > .nav > .pc-menu {
+    display: none;
+  }
 }
 .home-view > header > .nav > .right {
   display: flex;
@@ -603,8 +715,15 @@ body {
   clear: both;
   visibility: hidden;
 }
+.home-view > header > .nav > .right > .user-menu {
+  float: right;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > header > .nav > .right > .user-menu {
+    display: none;
+  }
+}
 .home-view > header > .nav > .right > .language-select {
-  font-family: copperplate, serif;
   cursor: pointer;
   padding: 8px 8px 8px 8px;
   font-size: 0.875rem;
@@ -615,19 +734,42 @@ body {
   margin-right: 8px;
 }
 .home-view > header > .nav > .right > .language-select:hover {
-  background-color: #990013;
+  background-color: rgba(153, 0, 19, 0.5);
   border-radius: 4px;
 }
 .home-view > header > .nav > .right > .language-select:active {
-  background-color: #990013;
+  background-color: rgba(153, 0, 19, 0.7);
   border-radius: 4px;
 }
 @media only screen and (max-width: 719px) {
   .home-view > header > .nav > .right > .language-select {
+    width: 100%;
+    height: 100%;
     background-color: transparent;
   }
   .home-view > header > .nav > .right > .language-select:hover {
     background-color: #333332;
+  }
+}
+.home-view > header > .nav > .right > .mix-button {
+  float: right;
+  margin-top: 2px;
+  margin-right: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > header > .nav > .right > .mix-button {
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+}
+.home-view > header > .nav > .right > .menu-button {
+  float: right;
+  display: none;
+  padding: 10px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > header > .nav > .right > .menu-button {
+    display: block;
   }
 }
 .home-view > main {
@@ -752,6 +894,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
   background-color: white;
   color: #990013;
   max-width: 700px;
@@ -837,6 +980,188 @@ body {
   background-color: rgba(153, 0, 19, 0.8);
 }
 .home-view > footer .footer-container > .copyright {
+  font-size: 0.75rem;
+  margin-bottom: 32px;
+}
+.nft-view > header {
+  display: flex;
+  position: fixed;
+  justify-items: center;
+  width: 100%;
+  background-color: black;
+  max-height: 52px;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header {
+    height: auto;
+  }
+}
+.nft-view > header > .nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+  padding: 8px;
+}
+.nft-view > header > .nav > .logo {
+  flex-grow: 1;
+}
+.nft-view > header > .nav > .logo > a > img {
+  height: 36px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header > .nav > .pc-menu {
+    display: none;
+  }
+}
+.nft-view > header > .nav > .right {
+  display: flex;
+}
+.nft-view > header > .nav > .right:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.nft-view > header > .nav > .right > .user-menu {
+  float: right;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header > .nav > .right > .user-menu {
+    display: none;
+  }
+}
+.nft-view > header > .nav > .right > .language-select {
+  cursor: pointer;
+  padding: 8px 8px 8px 8px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-right: 8px;
+}
+.nft-view > header > .nav > .right > .language-select:hover {
+  background-color: rgba(153, 0, 19, 0.5);
+  border-radius: 4px;
+}
+.nft-view > header > .nav > .right > .language-select:active {
+  background-color: rgba(153, 0, 19, 0.7);
+  border-radius: 4px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header > .nav > .right > .language-select {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  .nft-view > header > .nav > .right > .language-select:hover {
+    background-color: #333332;
+  }
+}
+.nft-view > header > .nav > .right > .mix-button {
+  float: right;
+  margin-top: 2px;
+  margin-right: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header > .nav > .right > .mix-button {
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+}
+.nft-view > header > .nav > .right > .menu-button {
+  float: right;
+  display: none;
+  padding: 10px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > header > .nav > .right > .menu-button {
+    display: block;
+  }
+}
+.nft-view > main {
+  max-width: 1240px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 128px;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > main {
+    padding: 20px;
+  }
+}
+.nft-view > main > .nft-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+  border-radius: 8px;
+  padding: 32px;
+}
+.nft-view > main > .nft-container > h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.nft-view > main > .nft-container > h2 {
+  font-size: 14px;
+  color: #990013;
+}
+.nft-view > main > .nft-container > .list-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 64px;
+  flex-wrap: auto;
+}
+@media only screen and (max-width: 719px) {
+  .nft-view > main > .nft-container > .list-container {
+    padding-top: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+}
+.nft-view > footer {
+  margin-top: 12rem;
+  color: white;
+  background-color: black;
+}
+.nft-view > footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: auto;
+}
+.nft-view > footer .footer-container > .sns {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.nft-view > footer .footer-container > .sns > a {
+  display: block;
+  border-radius: 8px;
+}
+.nft-view > footer .footer-container > .sns > a > img {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+.nft-view > footer .footer-container > .sns > a:hover {
+  background-color: rgba(153, 0, 19, 0.8);
+}
+.nft-view > footer .footer-container > .copyright {
   font-size: 0.75rem;
   margin-bottom: 32px;
 }

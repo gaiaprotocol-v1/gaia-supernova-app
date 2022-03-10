@@ -5,13 +5,15 @@ import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../BrowserInfo";
 import CommonUtil from "../CommonUtil";
 import Alert from "../component/shared/dialogue/Alert";
-import UserInfo from "../component/UserInfo";
+import MobileMenu from "../component/shared/menu/MobileMenu";
+import PCMenu from "../component/shared/menu/PCMenu";
+import UserInfo from "../component/shared/menu/UserInfo";
 import GaiaSupernovaContract from "../contracts/GaiaSupernovaContract";
 import SupernovaRewardDistributor from "../contracts/SupernovaRewardDistributor";
 import Wallet from "../klaytn/Wallet";
 import ViewUtil from "./ViewUtil";
 
-export default class Landing implements View {
+export default class Home implements View {
 
     private container: DomNode;
     private interval: any;
@@ -32,11 +34,12 @@ export default class Landing implements View {
 
         BodyNode.append(
             (this.container = el(".home-view",
-                el("header",
+                el("header.header",
                     el(".nav",
                         el(".logo",
-                            el("a", { click: () => { ViewUtil.go("/"); } }, el("img", { src: "/images/shared/img/img-gaia-supernova-logo.png", alt: "gaia supernova logo" })),
+                            el("a", { href: "/" }, el("img", { src: "/images/shared/img/img-gaia-supernova-logo.png", alt: "gaia supernova logo" })),
                         ),
+                        new PCMenu(),
                         el(".right",
                             select = el("select.language-select",
                                 el("option", "한국어 🇰🇷 ", { value: "ko" }),
@@ -48,6 +51,12 @@ export default class Landing implements View {
                                 },
                             ),
                             new UserInfo(),
+                            el("a.menu-button", el("i.fas.fa-bars"), {
+                                click: (event, button) => {
+                                    const rect = button.rect;
+                                    new MobileMenu({ left: rect.right - 170, top: rect.bottom }).appendTo(BodyNode);
+                                },
+                            }),
                         ),
                     ),
                 ),
@@ -107,7 +116,6 @@ export default class Landing implements View {
                                         }
                                     },
                                 }),
-                                el("a", msg("OPENSEA_BUTTON"), { href: "https://opensea.io/account?search[resultModel]=ASSETS&search[sortBy]=LAST_TRANSFER_DATE&search[query]=gaia%20supernova", target: "_blank" }),
                             ),
                         ),
                     ),

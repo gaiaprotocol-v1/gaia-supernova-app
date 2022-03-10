@@ -1,5 +1,7 @@
 key,ko,en
 TITLE,가이아 슈퍼노바,Gaia Supernova
+HOME_MENU,HOME,HOME
+NFT_MENU,NFT,NFT
 DASHBOARD_DESC,가이아 슈퍼노바 현황,Gaia Supernova State
 DASHBOARD_TITLE1,총 분배된 로열티,Total Distributed Reslae Royalty
 DASHBOARD_TITLE2,NFT 1개에 분배된 로열티,Resale Royalty per NFT
@@ -9,10 +11,19 @@ INFO_TITLE1,내 NFT 개수,My NFTs
 INFO_TITLE2,다음 로열티 수령 가능 일자,Next Resale Royalty Distribution Date
 INFO_TITLE3,내가 받은 누적 로열티,My Accumulated Resale Royalty
 INFO_TITLE4,쌓인 로열티,Accumulated Resale Royalty
-WARNING_DESC,다음 로열티 수령 이전에 NFT를 판매하거나 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 타인에게 분배됩니다.,"If you sell the NFT or send it to another wallet before the next resale royalty calim period, the current accumulated resale royalty will be distributed to others."
+WARNING_DESC,다음 로열티 수령 이전에 하나라도 NFT를 판매하거나 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 타인에게 분배됩니다.,"If your Gaia Supernova NFT balance is changed, you will lose all accumulated resale royalty that you can get at the point. The royalty will be distributed to other holders."
 REWARD_BUTTON,로열티 받기,Getting royalties.
 OPENSEA_BUTTON,NFT 보기,Watch NFT.
+NFT_TITLE,NFTs, NFTs
+NFT_DESC,나의 슈퍼노바 NFTs, My supernova NFTs
+NFT_SEND_BUTTON,전송하기,Send
+SEND_PROMPT_TITLE,전송하기,Send
+SEND_PROMPT_DESC,"전송받을 지갑 주소를 입력해주시기 바랍니다. 전송이 완료되면 절대 되찾을 수 없으니, 지갑 주소를 여러번 확인하시기 바랍니다. \n 또한, 다음 로열티 수령 이전에 하나라도 NFT를 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 타인에게 분배됩니다.","Please input a recipient wallet address. Once the NFT is transferred, you cannot find it back. So, please double-check the wallet address before you send it. \n If you transfer the NFT before you claim the resale royalty, resale royalty will be distributed to others.",,
+SEND_PROMPT_BUTTON,전송,Send,,
+CONFIRM_BUTTON,확인,Confirm,,
+CANCEL_BUTTON,취소,Cancel
 CONNECT_WALLET_BUTTON,지갑연결,Connect Wallet
+LOGOUT_BUTTON,로그아웃,Logout
 KLIP_POPUP_TITLE,QR 코드로 Klip 접속,Connect Klip via QR code
 KLIP_POPUP_DESC1,QR 코드 리더기 또는 카카오톡 앱을 통해 QR 코드를 스캔해주세요.,Please scan the QR code through a QR Code Reader or Kakao Talk Application
 KLIP_POPUP_DESC2,카카오톡 실행 ▶ 상단 검색창 클릭 ▶ 코드 스캔 후 로그인,Run Kakao Talk Application ▶ Click the search bar on the top ▶ Scan the code to log in
