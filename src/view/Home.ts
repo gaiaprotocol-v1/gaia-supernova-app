@@ -115,7 +115,7 @@ export default class Landing implements View {
                 el("footer",
                     el(".footer-container",
                         el(".sns",
-                            el("a.opensea", { href: "https://opensea.io/collection/gaia-kronos", target: "_blank" },
+                            el("a.opensea", { href: "https://opensea.io/collection/gaia-supernova", target: "_blank" },
                                 el("img", { src: "/images/shared/icn/icn-opensea.svg" }),
                             ),
                             el("a.discord", { href: "https://discord.gg/gaia", target: "_blank" },
