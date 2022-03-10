@@ -1,5 +1,5 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
-import { utils } from "ethers";
+import { BigNumber, utils } from "ethers";
 import msg from "msg.js";
 import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../BrowserInfo";
@@ -150,7 +150,7 @@ export default class Landing implements View {
             const balance = await GaiaSupernovaContract.balanceOf(address);
             this.allNftDisplay.empty().appendText(String(balance.toNumber()));
 
-            const remainingTimeToClaim = await SupernovaRewardDistributor.remainingTimeToClaim(address);
+            const remainingTimeToClaim = balance.eq(0) ? BigNumber.from(0) : await SupernovaRewardDistributor.remainingTimeToClaim(address);
             this.blockDisplay.empty().appendText(CommonUtil.displayBlockDuration(remainingTimeToClaim.toNumber()));
 
             const claimed = await SupernovaRewardDistributor.claimed(address);
