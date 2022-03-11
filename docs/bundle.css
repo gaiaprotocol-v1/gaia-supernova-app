@@ -954,7 +954,7 @@ body {
   color: white;
   background-color: black;
 }
-.home-view > footer .footer-container {
+.home-view > footer > .footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -962,24 +962,48 @@ body {
   max-width: 1240px;
   margin: auto;
 }
-.home-view > footer .footer-container > .sns {
+.home-view > footer > .footer-container > .sns {
   display: flex;
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.home-view > footer .footer-container > .sns > a {
+.home-view > footer > .footer-container > .sns > a {
   display: block;
   border-radius: 8px;
 }
-.home-view > footer .footer-container > .sns > a > img {
+.home-view > footer > .footer-container > .sns > a > img {
   padding: 8px;
   width: 40px;
   height: 40px;
 }
-.home-view > footer .footer-container > .sns > a:hover {
+.home-view > footer > .footer-container > .sns > a:hover {
   background-color: rgba(153, 0, 19, 0.8);
 }
-.home-view > footer .footer-container > .copyright {
+.home-view > footer > .footer-container > .link-tree {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+.home-view > footer > .footer-container > .link-tree > a {
+  text-decoration: none;
+}
+.home-view > footer > .footer-container > .link-tree > .kronos {
+  color: #CCCCCC;
+}
+.home-view > footer > .footer-container > .link-tree > .kronos:hover {
+  color: #b19c76;
+}
+.home-view > footer > .footer-container > .link-tree > .hr {
+  margin: 8px;
+}
+.home-view > footer > .footer-container > .link-tree > .supernova {
+  color: #CCCCCC;
+}
+.home-view > footer > .footer-container > .link-tree > .supernova:hover {
+  color: #990013;
+}
+.home-view > footer > .footer-container > .copyright {
   font-size: 0.75rem;
   margin-bottom: 32px;
 }
@@ -1136,7 +1160,7 @@ body {
   color: white;
   background-color: black;
 }
-.nft-view > footer .footer-container {
+.nft-view > footer > .footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1144,24 +1168,48 @@ body {
   max-width: 1240px;
   margin: auto;
 }
-.nft-view > footer .footer-container > .sns {
+.nft-view > footer > .footer-container > .sns {
   display: flex;
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.nft-view > footer .footer-container > .sns > a {
+.nft-view > footer > .footer-container > .sns > a {
   display: block;
   border-radius: 8px;
 }
-.nft-view > footer .footer-container > .sns > a > img {
+.nft-view > footer > .footer-container > .sns > a > img {
   padding: 8px;
   width: 40px;
   height: 40px;
 }
-.nft-view > footer .footer-container > .sns > a:hover {
+.nft-view > footer > .footer-container > .sns > a:hover {
   background-color: rgba(153, 0, 19, 0.8);
 }
-.nft-view > footer .footer-container > .copyright {
+.nft-view > footer > .footer-container > .link-tree {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+.nft-view > footer > .footer-container > .link-tree > a {
+  text-decoration: none;
+}
+.nft-view > footer > .footer-container > .link-tree > .kronos {
+  color: #CCCCCC;
+}
+.nft-view > footer > .footer-container > .link-tree > .kronos:hover {
+  color: #b19c76;
+}
+.nft-view > footer > .footer-container > .link-tree > .hr {
+  margin: 8px;
+}
+.nft-view > footer > .footer-container > .link-tree > .supernova {
+  color: #CCCCCC;
+}
+.nft-view > footer > .footer-container > .link-tree > .supernova:hover {
+  color: #990013;
+}
+.nft-view > footer > .footer-container > .copyright {
   font-size: 0.75rem;
   margin-bottom: 32px;
 }
