@@ -12,12 +12,14 @@ export default class Prompt extends Popup {
         confirmTitle: string,
         confirm: (value: string) => void,
         placeholder?: string,
+        warning?: string,
     ) {
         super(".popup-background");
         this.append(
             this.content = el(".dialogue.prompt",
                 el("h2", title),
                 el("p", message),
+                el(".warning", warning),
                 el(".input-container",
                     this.input = el("input", { placeholder: placeholder }),
                 ),

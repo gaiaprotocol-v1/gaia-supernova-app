@@ -20,7 +20,7 @@ export default class NftItem extends DomNode {
                 click: () => new Prompt(msg("SEND_PROMPT_TITLE"), msg("SEND_PROMPT_DESC"), msg("SEND_PROMPT_BUTTON"), async (to) => {
                     await GaiaSupernovaContract.transfer(to, this.id);
                     ViewUtil.waitTransactionAndRefresh();
-                }),
+                }, msg("SEND_PROMPT_INPUT"), msg("SEND_PROMPT_WARNING_DESC")),
             }),
         );
     }

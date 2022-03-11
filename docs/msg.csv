@@ -18,8 +18,10 @@ NFT_TITLE,NFTs, NFTs
 NFT_DESC,나의 슈퍼노바 NFTs, My supernova NFTs
 NFT_SEND_BUTTON,전송하기,Send
 SEND_PROMPT_TITLE,전송하기,Send
-SEND_PROMPT_DESC,"전송받을 지갑 주소를 입력해주시기 바랍니다. 전송이 완료되면 절대 되찾을 수 없으니, 지갑 주소를 여러번 확인하시기 바랍니다. \n 또한, 다음 로열티 수령 이전에 하나라도 NFT를 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 타인에게 분배됩니다.","Please input a recipient wallet address. Once the NFT is transferred, you cannot find it back. So, please double-check the wallet address before you send it. \n If you transfer the NFT before you claim the resale royalty, resale royalty will be distributed to others.",,
+SEND_PROMPT_DESC,"전송받을 지갑 주소를 입력해주시기 바랍니다. 전송이 완료되면 절대 되찾을 수 없으니, 지갑 주소를 여러번 확인하시기 바랍니다.","Please input a recipient wallet address. Once the NFT is transferred, you cannot find it back. So, please double-check the wallet address before you send it.",,
+SEND_PROMPT_WARNING_DESC,다음 로열티 수령 이전에 하나라도 NFT를 다른 지갑에 전송하면 현재 쌓여진 모든 로열티가 타인에게 분배됩니다.,If you transfer the NFT before you claim the resale royalty, resale royalty will be distributed to others.
 SEND_PROMPT_BUTTON,전송,Send,,
+SEND_PROMPT_INPUT,지갑 주소 입력,Input Wallet Address,,
 CONFIRM_BUTTON,확인,Confirm,,
 CANCEL_BUTTON,취소,Cancel
 CONNECT_WALLET_BUTTON,지갑연결,Connect Wallet
