@@ -1,6 +1,8 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { BigNumber, utils } from "ethers";
 import msg from "msg.js";
+import * as Sentry from "@sentry/browser";
+import { BrowserTracing } from "@sentry/tracing";
 import { View, ViewParams } from "skyrouter";
 import BrowserInfo from "../BrowserInfo";
 import CommonUtil from "../CommonUtil";
@@ -146,9 +148,18 @@ export default class Home implements View {
                 ),
             ))
         );
+        this.init();
         this.interval = setInterval(() => this.load(), 1000);
 
         select.domElement.value = BrowserInfo.language;
+    }
+
+    private async init() {
+        Sentry.init({
+            dsn: "https://8d5cc8ee60ec45a98e87e664834a68e3@o1156298.ingest.sentry.io/6270282",
+            integrations: [new BrowserTracing()],
+            tracesSampleRate: 1.0,
+        });
     }
 
     private async load() {
