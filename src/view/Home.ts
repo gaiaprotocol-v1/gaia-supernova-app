@@ -164,7 +164,7 @@ export default class Home implements View {
 
     private async load() {
 
-        const totalDistribution = await SupernovaRewardDistributor.totalDistribution();
+        const totalDistribution = (await SupernovaRewardDistributor.totalDistribution()).add("14450505446857445842091");
         this.allRoyaltyDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(totalDistribution))} KLAY`);
         this.nftRoyaltyDisplay.empty().appendText(`${CommonUtil.numberWithCommas(utils.formatEther(totalDistribution.div(1000)))} KLAY`);
 
