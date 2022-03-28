@@ -1,9 +1,7 @@
 declare const _default: {
     chainId: number;
     contracts: {
-        GaiaKronos: string;
         GaiaSupernova: string;
-        SupernovaMinter: string;
         SupernovaRewardDistributor: string;
     };
 };
