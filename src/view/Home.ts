@@ -128,7 +128,7 @@ export default class Home implements View {
                             el("a.opensea", { href: "https://opensea.io/collection/gaia-supernova", target: "_blank" },
                                 el("img", { src: "/images/shared/icn/icn-opensea.svg" }),
                             ),
-                            el("a.discord", { href: "https://discord.gg/gaia", target: "_blank" },
+                            el("a.discord", { href: "https://discord.com/invite/SjM4meh3hd", target: "_blank" },
                                 el("img", { src: "/images/shared/icn/icn-discord.svg" }),
                             ),
                             el("a.twitter", { href: "https://twitter.com/gaia_protocol", target: "_blank" },
