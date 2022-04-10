@@ -1012,6 +1012,12 @@ body {
 .home-view > footer > .footer-container > .link-tree > .supernova:hover {
   color: #990013;
 }
+.home-view > footer > .footer-container > .link-tree > .stableDAO {
+  color: #CCCCCC;
+}
+.home-view > footer > .footer-container > .link-tree > .stableDAO:hover {
+  color: #00445a;
+}
 .home-view > footer > .footer-container > .copyright {
   font-size: 0.75rem;
   margin-bottom: 32px;
@@ -1217,6 +1223,12 @@ body {
 }
 .nft-view > footer > .footer-container > .link-tree > .supernova:hover {
   color: #990013;
+}
+.nft-view > footer > .footer-container > .link-tree > .stableDAO {
+  color: #CCCCCC;
+}
+.nft-view > footer > .footer-container > .link-tree > .stableDAO:hover {
+  color: #00445a;
 }
 .nft-view > footer > .footer-container > .copyright {
   font-size: 0.75rem;
