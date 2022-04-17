@@ -3,6 +3,7 @@ import msg from "msg.js";
 import GaiaSupernovaContract from "../contracts/GaiaSupernovaContract";
 import ViewUtil from "../view/ViewUtil";
 import Prompt from "./shared/dialogue/Prompt";
+import TransferPopup from "./TransferPopup";
 
 export default class NftItem extends DomNode {
 
@@ -17,10 +18,10 @@ export default class NftItem extends DomNode {
             this.imageDisplay = el("img"),
             this.nameDisplay = el("h3"),
             el("button", msg("NFT_SEND_BUTTON"), {
-                click: () => new Prompt(msg("SEND_PROMPT_TITLE"), msg("SEND_PROMPT_DESC"), msg("SEND_PROMPT_BUTTON"), async (to) => {
+                click: () => new TransferPopup(async (to) => {
                     await GaiaSupernovaContract.transfer(to, this.id);
                     ViewUtil.waitTransactionAndRefresh();
-                }, msg("SEND_PROMPT_INPUT"), msg("SEND_PROMPT_WARNING_DESC")),
+                }),
             }),
         );
     }
