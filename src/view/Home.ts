@@ -139,7 +139,7 @@ export default class Home implements View {
                             ),
                         ),
                         el(".link-tree",
-                            el("a.kronos", "Gaia Kronos", { href: "https://app.gaiakronos.com/", target: "_blank" }),
+                            el("a.kronos", "Gaia Genesis", { href: "https://app.gaiagenesis.org/", target: "_blank" }),
                             el(".hr"),
                             el("a.supernova", "Gaia Supernova", { href: "https://app.gaiasupernova.com/", target: "_blank" }),
                             el(".hr"),
